@@ -71,6 +71,8 @@ public class SpellCheckerController {
     	String lingua_scelta=(String) tndLanguage.getValue(); 
     	model.loadDictionary(lingua_scelta);
     	List <RichWord> output=model.spellCheckText(par);
+    	//List <RichWord> output=model.spellCheckTextLinear(par);
+    	//List <RichWord> output=model.spellCheckTextDichotomic(par);
     	String op=""; 
     	for(int i=0; i<output.size(); i++) {
     		if(!output.get(i).isCorretta()) {
